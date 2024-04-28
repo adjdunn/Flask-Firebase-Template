@@ -1,0 +1,19 @@
+<div class="navbar">
+    <img class="logo-img" src="{{ url_for('static', filename='images/default_logo.png') }}" />
+    <span class="hamburger">&#9776;</span> <!-- Hamburger Icon -->
+    <div class="navbar-right" id="navbarRight">
+        <span class="closebtn">&times;</span>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <!-- Dropdown for News -->
+        <a href="#contact">News</a>
+        <a href="/login">Actions</a>
+        <div class="dropdown">
+            <a class="dropbtn" id="dropBtn">Account</a>
+            <div class="dropdown-content">
+                <a href="#news1">Profile</a>
+                <a href="#news2">Settings</a>
+                <a id="sign-out-btn" href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>

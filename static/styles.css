@@ -1,0 +1,448 @@
+:root {
+    --primary-color: #f4f4f4;
+    --primary-light-color: #FFE769;
+    --secondary-color: #FFE4BA;
+    --secondary-light-color: #FFF6E8;
+    --post-color: #62EEA8;
+    --delete-color: #FF9F9F;
+    --light-color: #FFFEFC;
+    --grey-color: #747E79;
+    --dark-color: #000000;
+
+    --primary-font: 'Poppins', sans-serif;
+    --seconday-font: 'Poppins', sans-serif;
+    
+    --border-width: 3px;
+    --element-border-radius: 5px;
+    
+    --button-height: 5px;
+    --small-button-height: 2px;
+    
+    --element-padding: 0.8em;
+    
+    --maximum-width: 320px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    color: var(--dark-color);
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    height: 100vh;
+}
+
+main {
+    padding: 2rem;
+    height: 100vh;
+}
+
+
+
+
+
+/* === Structure === */
+
+.container {
+    max-width: var(--maximum-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* === Navbar === */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: black;
+    box-shadow: 0px 8px 16px -4px rgba(128, 128, 128, 0.2);
+
+
+    width: 100%;
+    
+}
+
+.logo-img {
+    width: 80px;
+    margin-left: 1rem;
+}
+
+.logo {
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center; 
+    margin-right: 2rem;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Style the dropdown button */
+.dropdown {
+    position: relative; /* This makes the positioning of the dropdown content relative to this container */
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1.5rem;
+    right: 0; 
+    left: auto;
+    white-space: nowrap;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closebtn {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+/* === Buttons === */
+
+button {
+    font-weight: 600;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* === Forms === */
+
+input, button {
+    padding: var(--element-padding);
+    border-radius: var(--element-border-radius);
+    width: 100%;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+  
+
+
+
+/* Auth page styles - Login, Signup, Forgot Password */
+
+.auth-page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+  
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.input-group {
+    margin-bottom: 20px;
+}
+  
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+}
+  
+.input-group, .login-btn, .google-login-btn {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    flex-direction: column;
+
+}
+
+.login-btn {
+    background-color: #007bff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+.login-btn:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+}
+
+.google-login-btn {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.25);  
+}
+
+.google-login-btn:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+}
+
+.google-btn-logo {
+    width: 1.375em;
+}
+
+.alt-signin-divider {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 0.875em;
+    color: var(--dark-color);
+}
+
+.signup-link-container {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.error-msg {
+    color: red;
+    font-size: 1rem;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.login-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+    max-width: 10rem;
+    margin-top: 1rem;
+    height: 2.5rem;
+    cursor: pointer;
+    background-color: rgb(202, 195, 195);
+    border: none;
+}
+
+.login-link-btn:hover {
+    background-color: var(--grey-color);
+    border: none;
+    color: white;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: var(--grey-color); /* Light grey background */
+    color: white; /* Dark grey text */
+    font-family: var(--primary-font);
+    text-align: center; /* Centering the content */
+    padding: 10px 0; /* Padding above and below */
+    font-size: 14px; /* Standard font size */
+}
+
+.simple-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Padding on the sides */
+}
+
+.simple-footer a {
+    color: white; /* Standard link color */
+    text-decoration: none; /* No underlines on links */
+    margin: 0 5px; /* Margins for spacing */
+}
+
+.simple-footer a:hover {
+    text-decoration: underline; /* Underline on hover for better user interaction */
+}
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+
+
+
+
+    .navbar-right {
+        position: fixed; 
+        top: 0;
+        left: -100%; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color); 
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        overflow-y: auto;
+        transition: 0.5s; /* Smooth transition for sliding in/out */
+        padding: 0;
+        padding-bottom: 40rem;
+        margin: 0;
+    }
+
+    .navbar-right a {
+        color: black;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 2rem;
+        display: block; /* Ensure links take full width */
+        transition: 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .navbar a:hover {
+        
+        background-color: inherit;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        right: auto;
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        box-shadow: none;
+        overflow-y: auto;
+        
+    }
+
+    .dropdown-content a {
+        padding: auto;
+        text-align: center;
+        font-size: 1.6rem;
+        color: gray;
+    }
+
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 2.2rem;
+    }
+
+    .closebtn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 3rem;
+        cursor: pointer;
+        color: black
+    }
+
+    .simple-footer {
+        flex-direction: column;
+        padding: 0;
+    }
+}

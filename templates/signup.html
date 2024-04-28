@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" >
+
+    <title>Flask Template</title>
+
+    </head>
+    <body>
+        {% include 'navbar_public.html' %}
+
+        <main>
+
+            <div class="auth-page_container">
+
+                <div class="login-form-container">
+
+                <div class="login-form">
+
+                    <h2>Sign Up</h2>
+
+                    <div class="input-group">
+                    <input type="email" id="email-input" name="email" placeholder="Email" required>
+                    <div id="email-error-message" class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group">
+                    <input type="password" id="password-input" name="password" placeholder="Password" required>
+                    <div id="password-error-message" class="error-msg"></div>
+                    </div>
+
+                    <div id="create-account-btn" class="login-btn">Create Account</div>
+
+                    <div class="alt-signin-divider">OR</div>
+
+                    <button id="sign-up-with-google-btn" class="google-login-btn">
+                        <img src="{{ url_for('static', filename='images/google-icon.png') }}" alt="Google Sign Up" class="google-btn-logo">
+                        Sign up with Google
+                    </button>
+                    <div id="google-signin-error-message" class="error-msg"></div>
+
+                    <div class="signup-link-container">Already have an account? <a href="{{ url_for('login') }}">Login</a></div>
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        {% include 'footer.html' %}
+
+        <script src="{{ url_for('static', filename='login-auth.js') }}" type="module"></script>
+        <script src="{{ url_for('static', filename='scripts.js') }}" type="module"></script>
+
+    </body>
+</html>
