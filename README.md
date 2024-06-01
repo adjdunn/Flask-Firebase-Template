@@ -77,10 +77,7 @@ Open a Pull Request
 ## License
 Distributed under the MIT License. 
 
-## Contact
-Aaron Dunn
-Twitter: @AaronDu6579308
-Email: wiresift@gmail.com
+
 
 ## Acknowledgements
 Flask

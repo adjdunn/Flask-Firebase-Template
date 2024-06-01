@@ -17,7 +17,15 @@
 
     {% include 'navbar_private.html' %}
 
-    <h1>Dashboard (Protected Page)</h1>
+    <main>
+
+      <h1>Dashboard (Protected Page)</h1>
+
+      <p>This is a protected page that requires authenication to view.</p> 
+
+      <p>Use this template to create and customize more protected pages for your app.</p>
+
+    </main>
 
     <script src="{{ url_for('static', filename='login-auth.js') }}" type="module"></script>
     <script src="{{ url_for('static', filename='scripts.js') }}" type="module"></script>
