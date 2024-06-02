@@ -23,6 +23,8 @@ Before you begin, ensure you have the following installed:
 
 To get a local copy up and running follow these simple steps.
 
+Youtube Tutorial Link: https://youtu.be/HoRutj1z3fQ?si=AqlPrnqYYt90DdKf
+
 ### 1. Clone the repository
 
 git clone https://github.com/adjdunn/simple_firebase_app
@@ -44,7 +46,7 @@ pip install -r requirements.txt
 - Paste "firebaseConfig" data into firebase-config.py file (adjust format to make it a valid python dict).
 - Navigate to the "Firestore Database" section and create your database (if required for your project).
 - Go to "Project Settings" > "Service accounts" > "Firebase Admin SDK" > Python option > click on the "Generate new private key" button > Download the JSON file.
-- Place the downloaded JSON file in your project directory and rename it to firebase_auth.json.
+- Place the downloaded JSON file in your project directory and rename it to firebase-auth.json.
 - Navigate to "Buid" > "Authentication" section > click "Sign-in Method" and enable sign-in for Email/Password and Google options.
 - Inside the "Autentication" section > click "Settings" > "Authorized Domains" and add your website domain to allow it to use the Google sign pop up in (localhost is authorized by default).
 
@@ -61,6 +63,15 @@ python app.py
 This will start the Flask application on http://localhost:5000 by default.
 
 ### 5. Customize the template to build your own app.
+
+To add private pages (requiring authentication to view) add the @auth_required decorator to the route. 
+
+Example:
+
+@app.route('/dashboard')
+@auth_required
+def dashboard():
+    return "This is a private page that requires authentication to view"
 
 
 
