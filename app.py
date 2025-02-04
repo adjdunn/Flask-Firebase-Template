@@ -55,7 +55,7 @@ def authorize():
     token = token[7:]  # Strip off 'Bearer ' to get the actual token
 
     try:
-        decoded_token = auth.verify_id_token(token) # Validate token here
+        decoded_token = auth.verify_id_token(token, check_revoked=True, clock_skew_seconds=60) # Validate token here
         session['user'] = decoded_token # Add user to session
         return redirect(url_for('dashboard'))
     
